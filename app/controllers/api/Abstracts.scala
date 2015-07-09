@@ -1,6 +1,7 @@
 package controllers.api
 
-import org.joda.time.format.DateTimeFormat
+import org.joda.time.format._
+import org.joda.time.DateTime
 import play.api._
 import play.api.libs.functional.syntax._
 import play.api.libs.json.{JsArray, JsObject, Json, _}
@@ -60,6 +61,25 @@ extends Silhouette[Login, CachedCookieAuthenticator] {
 
     Ok(Json.toJson(abstracts))
   }
+
+
+/**
+   * List all published abstracts for a given conference.
+   *
+   * @return All abstracts publicly available.
+   */
+  def listByConferenceAfterTime(id: String, time: String) = UserAwareAction { implicit request =>
+
+    val parsedTime = ISODateTimeFormat.dateTime().parseDateTime(time)
+
+    val conference = conferenceService.get(id)
+    val abstracts = abstractService.listAfterTime(conference, parsedTime)
+
+    Ok(Json.toJson(abstracts))
+  }
+
+
+
 
   /**
    * List all abstracts for a given conference.

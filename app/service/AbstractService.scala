@@ -11,6 +11,8 @@ package service
 
 import java.io.File
 import javax.persistence.{EntityNotFoundException, TypedQuery}
+import org.joda.time.format.DateTimeFormat
+import org.joda.time._
 
 import play.Play
 import models._
@@ -55,8 +57,40 @@ class AbstractService(figPath: String) extends PermissionsBase {
       val query: TypedQuery[Abstract] = em.createQuery(queryStr, classOf[Abstract])
       query.setParameter("uuid", conference.uuid)
       query.setParameter("state", AbstractState.Accepted)
-      asScalaBuffer(query.getResultList)
-    }
+      asScalaBuffer(query.getResultList)     }
+  }
+
+   /** --------------------------------------------
+   * List all published abstracts that belong to a conference.
+   *
+   * @param conference The conference for which to list the abstracts.
+   *
+   * @return All published abstracts that are associated with a
+   *         certain conference.
+   */
+  def listAfterTime(conference: Conference, timeaa: DateTime) : Seq[Abstract] = {
+
+    //val timeObj = LocalDateTime.parse(time, DateTimeFormat.forPattern("EEE, dd MMM yyyy 'GMT'"))
+
+    // if(!conference.isPublished) {
+    //   return Seq.empty[Abstract]
+    // }
+
+    // query { em =>
+    //   val queryStr =
+    //     """SELECT DISTINCT a FROM Abstract a
+    //        LEFT JOIN FETCH a.conference c
+    //        WHERE c.uuid = :uuid AND a.state = :state AND a.mtime > 2015-07-09T08:24:50.834Z
+    //        ORDER BY a.sortId, a.title"""
+
+    //   val query: TypedQuery[Abstract] = em.createQuery(queryStr, classOf[Abstract])
+    //   query.setParameter("uuid", conference.uuid)
+    //   query.setParameter("state", AbstractState.Accepted)
+//      query.setParameter("mtime", timeObj)
+      //asScalaBuffer(query.getResultList)
+    //}
+
+    list(conference).filter(_.mtime.isAfter(timeaa))
   }
 
   /**

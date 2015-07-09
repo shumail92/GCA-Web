@@ -38,6 +38,9 @@ GET           /api/conferences/:id/allAbstracts               @controllers.api.A
 PUT           /api/conferences/:id/owners                     @controllers.api.Conferences.setPermissions(id: String)
 GET           /api/conferences/:id/owners                     @controllers.api.Conferences.getPermissions(id: String)
 
+# testing for app
+GET           /api/conferences/:id/abstracts/:time            @controllers.api.Abstracts.listByConferenceAfterTime(id: String, time: String)
+
 # Abstract interface
 GET           /api/abstracts/:id                              @controllers.api.Abstracts.get(id: String)
 PUT           /api/abstracts/:id                              @controllers.api.Abstracts.update(id: String)

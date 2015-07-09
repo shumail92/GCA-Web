@@ -1,0 +1,25 @@
+New log file opened at Thu Jul 09 14:17:51 CEST 2015 by 12140@Shumail-Laptop
+Sending msg to client play-fork-run-e099c666-e607-4b33-9545-54383df8fb8c: DetachedLogEvent(LogMessage(debug,sbt server socket logs are in: F:\LMU\GCA-Web\.sbtserver\connections\master.log))
+Sending msg to client play-fork-run-e099c666-e607-4b33-9545-54383df8fb8c: DetachedLogEvent(LogMessage(debug,sbt client logs are in: F:\LMU\GCA-Web\.sbtserver\connections\play-fork-run-e099c666-e607-4b33-9545-54383df8fb8c.log))
+Sending msg to client play-fork-run-e099c666-e607-4b33-9545-54383df8fb8c: DetachedLogEvent(LogMessage(debug,sbt general server logs are in: F:\LMU\GCA-Web\.sbtserver\master.log))
+Reading next message from client.
+Got request: DaemonRequest(true)
+Reading next message from client.
+Sending msg to client play-fork-run-e099c666-e607-4b33-9545-54383df8fb8c: (3,ReceivedResponse())
+Got request: ListenToEvents()
+Reading next message from client.
+Got request: KeyLookupRequest(GCA-Web/playForkConfig)
+Reading next message from client.
+Got request: UnlistenToEvents()
+Reading next message from client.
+Client play-fork-run-e099c666-e607-4b33-9545-54383df8fb8c EOF, shutting down.
+Stopping client.
+Client play-fork-run-e099c666-e607-4b33-9545-54383df8fb8c thread exiting.
+Dropping message ExecutionWaiting(29,backgroundRun,ClientInfo(308a4040-ddd5-4d64-805d-557b9bdb99f8,activator,Activator,3,Vector())) to dead client play-fork-run-e099c666-e607-4b33-9545-54383df8fb8c
+Dropping message ExecutionStarting(29) to dead client play-fork-run-e099c666-e607-4b33-9545-54383df8fb8c
+Dropping message TaskStarted(29,2704,Some(AttributeKey[sbt.UpdateReport]("update") in Scope(Build: file:/F:/LMU/GCA-Web/, , Project: ProjectReference(file:/F:/LMU/GCA-Web/,GCA-Web)))) to dead client play-fork-run-e099c666-e607-4b33-9545-54383df8fb8c
+Dropping message BackgroundJobStarted(25,BackgroundJobInfo(3,backgroundRun,AttributeKey[sbt.BackgroundJobHandle]("backgroundRun") in Scope(Build: file:/F:/LMU/GCA-Web/, , Project: ProjectReference(file:/F:/LMU/GCA-Web/,GCA-Web), Config: compile))) to dead client play-fork-run-e099c666-e607-4b33-9545-54383df8fb8c
+Dropping message (4,ReceivedResponse()) to dead client play-fork-run-e099c666-e607-4b33-9545-54383df8fb8c
+Dropping message (5,KeyLookupResponse(GCA-Web/playForkConfig,Vector(AttributeKey[play.forkrun.protocol.ForkConfig]("playForkConfig") in Scope(Build: file:/F:/LMU/GCA-Web/, , Project: ProjectReference(file:/F:/LMU/GCA-Web/,GCA-Web))))) to dead client play-fork-run-e099c666-e607-4b33-9545-54383df8fb8c
+Dropping message (6,ReceivedResponse()) to dead client play-fork-run-e099c666-e607-4b33-9545-54383df8fb8c
+Dropping message (0,ReceivedResponse()) to dead client play-fork-run-e099c666-e607-4b33-9545-54383df8fb8c

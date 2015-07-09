@@ -1,0 +1,5 @@
+New log file opened at Thu Jul 09 14:22:44 CEST 2015 by 12140@Shumail-Laptop
+Sending msg to client play-fork-run-792441ee-b032-4b70-b5b7-d6a799b560a4: DetachedLogEvent(LogMessage(debug,sbt server socket logs are in: F:\LMU\GCA-Web\.sbtserver\connections\master.log))
+Sending msg to client play-fork-run-792441ee-b032-4b70-b5b7-d6a799b560a4: DetachedLogEvent(LogMessage(debug,sbt general server logs are in: F:\LMU\GCA-Web\.sbtserver\master.log))
+Sending msg to client play-fork-run-792441ee-b032-4b70-b5b7-d6a799b560a4: DetachedLogEvent(LogMessage(debug,sbt client logs are in: F:\LMU\GCA-Web\.sbtserver\connections\play-fork-run-792441ee-b032-4b70-b5b7-d6a799b560a4.log))
+Reading next message from client.
